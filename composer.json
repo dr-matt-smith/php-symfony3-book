@@ -1,5 +1,5 @@
 {
   "scripts":{
-    "pdf":"pandoc --latex-engine=xelatex -H 91_preable/preamble.tex -V fontsize=10pt -V documentclass:book -V papersize:a4paper -V classoption:openright --number-sections --bibliography=05_references/references.bib 01_front_material/1_title.md 01_front_material/4_acknowledgements.md 92_toc/toc.md 00_chapters/chapter01.md 00_chapters/chapter02.md 04_appendices/a_meetings/meetings.md 05_references/references.md -o _BOOK_intro_symfony3.pdf"
+    "pdf":"pandoc --latex-engine=xelatex -H 91_preable/preamble.tex -V fontsize=10pt -V documentclass:book -V papersize:a4paper -V classoption:openright --number-sections --bibliography=05_references/references.bib 01_front_material/1_title.md 01_front_material/4_acknowledgements.md 92_toc/toc.md 00_content/part01/part1.md 00_content/part01/chapter01.md 00_content/part01/chapter02.md 00_content/part01/chapter03.md 00_content/part02/part2.md 00_content/part02/chapter04.md 04_appendices/entity_names.md 04_appendices/entity_gen_interactive.md  04_appendices/osx_kill_php_process.md 05_references/references.md -o _BOOK_intro_symfony3.pdf"
   }
 }

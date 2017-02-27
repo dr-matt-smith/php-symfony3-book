@@ -23,14 +23,17 @@ Either:
 
 - install the Symfony command line installed, then create a project like this (to create a new project in a directory named `project01`):
 
+```bash
         $ symfony new project01
-
+```
 
 or
 
 - use Composer to create a new blank project for you, like this (to create a new project in a directory named `project01`):
 
+```bash
         $  composer create-project symfony/framework-standard-edition project01
+```
 
 Learn about both these methods at the [Symfony download-installer page](http://symfony.com/download) and the [Symfony setup page](https://symfony.com/doc/current/setup.html)
 
@@ -53,4 +56,6 @@ If you're not using a database engeine like MySQL, then you can use the Symfony 
 
 At the CLI (comamnd line terminal) ensure you are at the base level of your oproject (i.e. the same directory that has your `composer.json` file), and type the following:
 
+```bash
     $ php bin/console server:run
+```
