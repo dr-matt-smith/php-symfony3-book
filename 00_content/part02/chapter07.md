@@ -112,3 +112,4 @@ There are lots of round and curly brackets all over the place, but try to rememb
 Figure \ref{names_links} shows our list of students with the names as links.
 
 ![List of students with names as link to show pages. \label{names_links}](./03_figures/database/7_names_as_links_sm.png)
+
