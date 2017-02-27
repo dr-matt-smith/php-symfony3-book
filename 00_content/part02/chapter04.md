@@ -78,7 +78,7 @@ We can now use the Symfony CLI to **generate** the new database for us. You've g
 
 You should now see a new database in your DB manager. Figure \ref{new_db} shows our new `symfony_book` database created for us.
 
-![CLI created database in PHPMyAdmin. \label{new_db}](./03_figures/database/1_new_db_sm.png)
+![CLI created database in PHPMyAdmin. \label{new_db}](./03_figures/database/1_new_db.png)
 
 **NOTE** Ensure your database server is running before trying the above, or you'll get an error like this:
 

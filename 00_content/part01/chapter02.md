@@ -130,6 +130,8 @@ Twig templates are located in this directory:
     /app/Resources/views
 ```
 
+Delete everything in this directory (more of that default homepage stuff that we get with a new Symfony project). We'll create our own Twig templates from scratch in this location next.
+
 Figure \ref{views_dir} shows the 2 templates we are about to create in this location.
 
 ![Location of Twig templates. \label{views_dir}](./03_figures/introduction/3_view_location_sm.png)
@@ -184,9 +186,16 @@ Here is the template for our index page, `index.html.twig`:
     {% endblock %}
 ```
 
+Some interesting bits in this template:
+
+- the Twig dump command `{{ dump() }}` is very handy, it let's us see a full dump of all the variables Twig has been passed. Both those we explicitly pass like `name`, plus the `app` variable, that let's Twig get access to things like the sessions variables etc.a
+
+- also we see how we can use the route 'name' in Twig to generate an URL for that route. The example in this template is
+
 ## See list of all routes
 
-We can use another of Symfony's CLI commands to see a list of all routes - we should see our `homepage` root in that list:
+We can use another of Symfony's CLI commands to see a list of all routes - we should see our `homepage` root in that list: `<a href="{{ path('homepage') }}">`. Twig can also pass values for routes that expect parameters such as object IDs etc.
+
 
 ```bash
         php bin/console debug:router
