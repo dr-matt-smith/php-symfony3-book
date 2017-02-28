@@ -52,10 +52,14 @@ Download a project (e.g. `git clone URL`), then type `composer update` to downlo
 
 ## How to I run a Symfony webapp?
 
-If you're not using a database engeine like MySQL, then you can use the Symfony console command to 'serve up' your Symfony project from the command line
+### From the CLI
+If you're not using a database engine like MySQL, then you can use the Symfony console command to 'serve up' your Symfony project from the command line
 
-At the CLI (comamnd line terminal) ensure you are at the base level of your oproject (i.e. the same directory that has your `composer.json` file), and type the following:
+At the CLI (comamnd line terminal) ensure you are at the base level of your project (i.e. the same directory that has your `composer.json` file), and type the following:
 
 ```bash
     $ php bin/console server:run
 ```
+
+### Webserver
+If you are running a webserver (or combined web and database server like XAMPP or Laragon), then point your web server root to the `/web` folder - this is where public files go in Symfony projects.
