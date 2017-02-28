@@ -136,7 +136,7 @@ Figure \ref{views_dir} shows the 2 templates we are about to create in this loca
 
 ![Location of Twig templates. \label{views_dir}](./03_figures/introduction/3_view_location_sm.png)
 
-Here is our `_base.html.twig` template:
+Here is our `_base.html.twig` template for a well-formed HTML 5 page^[NOTE - if you want to see the FANTASTICALLY useful Symfony debug toolbar, your pages must render a well-formed HTML document (with doctype, head, body etc.). Using a base Twig template is the simplest way to do this usually.]:
 
 ```html
     <!DOCTYPE html>
