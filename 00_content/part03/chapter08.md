@@ -1,4 +1,4 @@
-\mainmatter
+
 
 # DIY forms
 
@@ -106,7 +106,7 @@ What should we do if an empty name string was submitted? We need to **validate**
 Symfony offers a very useful feature called the 'flash bag'. Flash data exists for just 1 request and is then deleted from the session. So we can create an error message to be display (if present) by Twig, and we know some future request to display the form will no have that error message in the session any more.
 
 
-## Three kinds of flash message: notice, warning and error
+## Three kinds of flash message: notice, warning and error (`project06`)
 
 Typically we create 3 differnt kinds of flash notice:
 
