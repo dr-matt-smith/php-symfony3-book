@@ -17,13 +17,11 @@ So we can simplify the `body` block of our Twig template (`/app/Resources/views/
 ```html
     {% block body %}
         <h1>Create new student</h1>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
+        {{ form(form) }}
     {% endblock %}
 ```
 
-That's it! No `<form>` element, no `<input>`s, no submit button, no labels! Even flash messages (relating to form validation errors) will be displayed via the `form_widget()` Twig function.
+That's it! No `<form>` element, no `<input>`s, no submit button, no labels! Even flash messages (relating to form validation errors) will be displayed by this function Twig function (global form errors at the top, and field specific erorrs by each form field).
 
 The 'magic' happens in the controller method...
 
@@ -49,6 +47,13 @@ Let's refactor `newFormAction()` to use Symfony's FormBuilder to create the form
         $templateName = 'students/new';
         return $this->render($templateName . '.html.twig', $argsArray);
     }
+```
+
+Note - for the above code to work we also need to add two `use` statements so that PHP knows about the classes `TextType` and `SubmitType`. These can be found in the form extension Symfony component:
+
+```php
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 ```
 
 We can see that the method does the following:
