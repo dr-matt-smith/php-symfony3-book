@@ -131,7 +131,7 @@ So we now have getters and setters (no setter for ID since we don't change the A
 
 ## Creating tables in the database
 
-Now our entity  `Student` is completed, we can tell Doctrine to create a corresponding table in the database (or ALTER the table in the database if one previously exisited):
+Now our entity  `Student` is completed, we can tell Doctrine to create a corresponding table in the database (or ALTER the table in the database if one previously existed):
 
 ```bash
      $ php bin/console doctrine:schema:update --force
@@ -156,4 +156,3 @@ Doctrine allows you to generated entites matching tables in an existing database
 
 - [Symfony docs on inferring entites from existing db tables](http://symfony.com/doc/current/doctrine/reverse_engineering.html)
 
-3_new_student.png

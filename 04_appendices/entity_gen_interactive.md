@@ -1,6 +1,6 @@
 
 
-# Transcript of interactive entity generation
+# Transcript of interactive entity generation \label{appendix_entity_gen}
 
 The following is a transcript of an interactive session in the terminal CLI to create an `Item` entity class (and related `ItemRepository` class) with thse properties:
 

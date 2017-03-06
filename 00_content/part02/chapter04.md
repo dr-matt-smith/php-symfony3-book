@@ -28,7 +28,7 @@ You can read more about ORMs and Symfony at:
 Once you've learnt how to work with Entity classes and Doctrine, these are the 3 commands you need to know:
 
 1. `doctrine:database:create`
-1. `doctrine:database:migrate`
+1. `doctrine:database:migrate` (or possibly `doctrine:schema:update --force`)
 1. `doctrine:fixtures:load`
 
 This should make sense by the time you've reached the end of this chapter.
