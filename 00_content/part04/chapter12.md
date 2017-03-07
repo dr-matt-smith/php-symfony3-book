@@ -242,7 +242,7 @@ The 'edit' and 'delete' generated methods are as you might expect. The show meth
 
 ```
 
-The 'delete' method deletes the entity and redirects back to the list of electives for the 'index' action. Notice that an annotation comment states that this controller method is in reponse to `DELETE` method requests (more about this below).
+The 'delete' method deletes the entity and redirects back to the list of electives for the 'index' action. Notice that an annotation comment states that this controller method is in response to `DELETE` method requests (more about this below).
 
 ```php
         /**
@@ -269,7 +269,7 @@ The 'delete' method deletes the entity and redirects back to the list of electiv
 
 ## The generated method `createDeleteForm()`
 
-To avoid the delete method becoming too long and complicated, a sepaerate method
+To avoid the delete method becoming too long and complicated, a separate method
  `createDeleteForm()` was generated that creates and returns a Symfony form-builder form with a 'DELETE' button simulating an HTTP DELETE method.
 
 ```php

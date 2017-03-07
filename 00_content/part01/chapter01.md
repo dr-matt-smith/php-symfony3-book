@@ -63,14 +63,6 @@ At the CLI (comamnd line terminal) ensure you are at the base level of your proj
 ### Webserver
 If you are running a webserver (or combined web and database server like XAMPP or Laragon), then point your web server root to the `/web` folder - this is where public files go in Symfony projects.
 
-### Issues with timezone
+### Problem Solving
 
-Try adding the following construction to `/app/AppKernel.php` to solve timeszone problems:
-
-```php
-    public function __construct($environment, $debug)
-    {
-        date_default_timezone_set( 'Europe/Dublin' );
-        parent::__construct($environment, $debug);
-    }
-```
+If you have trouble with running Symfony, take a look at Appendix \cite{appendix_problem_solving}, which lists some common issues and how to solve them.

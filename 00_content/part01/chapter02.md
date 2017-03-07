@@ -3,7 +3,7 @@
 
 ## It isn't working
 
-If you don't get the default Sfymfony home page, try this:
+If you don't get the default Symfony home page, try this:
 
 - copy the contents of `/web/app_dev.php` into `/web/app.php`
 
