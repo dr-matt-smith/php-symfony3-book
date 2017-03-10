@@ -10,8 +10,18 @@
  
 % Headers and page numbering 
 \usepackage{fancyhdr}
-\pagestyle{plain}
- 
+
+\fancyhead{}
+\fancyhead[R]{\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{}
+\fancyfoot[L]{\textit{An Introduction to Symfony 3 \copyright Matt Smith 2017}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\pagestyle{fancy}
+
 % Fonts and typesetting
 \setsansfont{Verdana}
 

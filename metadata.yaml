@@ -2,4 +2,7 @@
 numbersections: yes
 fontsize: 10pt
 papersize: a4paper
+header: This is fancy
+footer: An Introduction to Symfony 3 \copyright Matt Smith 2017
+
 ---
