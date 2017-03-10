@@ -59,8 +59,8 @@ Now we test whether or not `colours` is NULL (i.e. we could not read anything in
         {% set default_colours = 'yes' %}
 
         {% set colours = {
-            'foreground': 'blue',
-            'background': 'pink'
+            'foreground': 'black',
+            'background': 'white'
            }
         %}
     {% endif %}
