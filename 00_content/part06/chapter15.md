@@ -286,10 +286,10 @@ Let's add the admin controller, with an action for an admin homepage (the route 
 ```
 
 
-NOTE: Why have route prefix for a class when there is only one route? Well, having a route prefix means Symfony resolves `/admin` with no trailing slash as `/admin/` with no complaining! Figure \ref{prefix_added} shows how a training forward slash is automatically added to a request to `/admin`.
+NOTE: Why have route prefix for a class when there is only one route? Well, having a route prefix means Symfony resolves `/admin` with no trailing slash as `/admin/` with no complaining! Figure \ref{prefix_added} shows how a trailing forward slash is automatically added to a request to `/admin`.
 
 
-![Symfony adding training slash to admin home page request. \label{prefix_added}](./03_figures/authentication/10_no_trailing_slash_sm.png)
+![Symfony adding trailing slash to admin home page request. \label{prefix_added}](./03_figures/authentication/10_no_trailing_slash_sm.png)
 
 
 
@@ -339,7 +339,7 @@ We can now add SESSION logic to our  `AdminController->indexAction()` method, te
 
 - if no user token in the session, then we'll add a flash error to the session Flash bag, and redirecet to the login page
 
-**NOTE** Due to the way redirects work in Symfony 3, flash messages live to 2 requests during a redirect, so we need to clear the flash bag before adding the message, otherwise we'll see the message twice ... a bit odd but this approach seems to work ...
+**NOTE** Due to the way redirects work in Symfony 3, flash messages live for 2 requests during a redirect, so we need to clear the flash bag before adding the message, otherwise we'll see the message twice ... a bit odd but this approach seems to work ...
 
 
 ```php
@@ -368,7 +368,7 @@ We can now add SESSION logic to our  `AdminController->indexAction()` method, te
 
 ![User redirected to login page after requesting `/admin`, with flash error (when not logged-in). \label{admin_redirect}](./03_figures/authentication/7_login_redirect_sm.png)
 
-If we login with the credentials username='`admin`' and password='`admin`', we get to see the admin home page, and we can see, from the Symfony profiler, that a user obejct is stored in the session (See Figure \ref{user_in_session}).
+If we login with the credentials username='`admin`' and password='`admin`', we get to see the admin home page, and we can see, from the Symfony profiler, that a user object is stored in the session (See Figure \ref{user_in_session}).
 
 ![User token in session, after requesting admin home (when logged in). \label{user_in_session}](./03_figures/authentication/8_user_session_token_sm.png)
 
@@ -385,14 +385,14 @@ If the user is accessing the admin pages, let's inform them of the user they are
     }
 ```
 
-We can also add some Twig logic to our  `_base.html.twig` template to display (on every page) login detaila, and login/login link as appropriate:
+We can also add some Twig logic to our  `_base.html.twig` template to display (on every page) login detaila, and login/logout link as appropriate:
 
 ```html
     {% set user = app.session.get('user') %}
 
     {% if user is null %}
         <p>
-            error - you are not logged in: <a href="{{ path('login') }}">login</a>
+            you are not logged in: <a href="{{ path('login') }}">login</a>
         </p>
     {% else %}
         <header>
