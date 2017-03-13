@@ -1,1 +1,1 @@
-\part{Authentication - simple}
+\part{Security and Authentication}
