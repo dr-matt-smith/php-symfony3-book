@@ -5,14 +5,15 @@
 
 ## No home page loading
 
-If you don't get the default Symfony home page, try this:
+Ensure web server is running (either from console, or a webserver application with web root of the project's `/web` directory).
 
-- copy the contents of `/web/app_dev.php` into `/web/app.php`
+Point your web browser to the `app_dev.php` front controller script, e.g.:
 
-WARNING - this is just for now (we'll learn property Symfony configuration later). But this should get you going for now. You should NEVER do this for a project that might actually end up as a public production site!
+```
+    http://localhost:8000/app_dev.php
+```
 
-
-## "Route not Found" error after adding new controller methor
+## "Route not Found" error after adding new controller method
 
 If you have issues of Symfony not finding a new route you've added via a controller annotation comment, try this:
 
