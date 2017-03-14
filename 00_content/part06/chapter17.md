@@ -58,6 +58,25 @@ You can read more about these paths, and other customisable features of the Symf
 
 Let's create a new `SecurityController` in `src/AppBundle/Controller/` which declares the login route, and also tells our application to render a Twig custom login form template.
 
+```php
+    namespace AppBundle\Controller;
+
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Request;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+    class SecurityController extends Controller
+    {
+        /**
+         * @Route("/login", name="login")
+         */
+        public function loginAction(Request $request)
+        {
+            // logic to show login form goes here
+        }
+    }
+```
+
 **NOTE** We have broken-down the final steps of naming the Twig template and building the Twig argument array (simplying the one-liner code from the Symfony documentation):
 
 ```php
