@@ -266,3 +266,9 @@ And our refactored method `newFormAction()` is:
         return $this->render($templateName . '.html.twig', $argsArray);
     }
 ```
+
+## Video tutorials about Symfony forms
+
+Here are some video resources on this topic:
+
+- (Code Review form validation with `@Assert`)[https://codereviewvideos.com/course/beginner-s-guide-to-symfony-3-forms/video/validating-form-data-with-symfony-3]

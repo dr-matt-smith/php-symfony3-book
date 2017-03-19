@@ -1,12 +1,13 @@
 
-# CLI generation of CRUD controller and templates
+# CRUD controller and templates generation
 
 ## Symfony's CRUD generator
 
 Symfony offers a very powerful CRUD generator command:
 
 ```php
-    php bin/console generate:doctrine:crud --entity=AppBundle:Elective --format=annotation --with-write --no-interaction
+    php bin/console generate:doctrine:crud --entity=AppBundle:Elective --format=annotation
+    --with-write --no-interaction
 ```
 
 With the single command above Symfony will generate a CRUD controller (`ElectiveController`) and also create a directory containing Twig templates (`app/Resources/views/elective/index.html.twig` etc.).
@@ -23,7 +24,8 @@ Let's first look at the namespaces and class declaration line:
     use AppBundle\Entity\Elective;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+    use Symfony\Component\HttpFoundation\Request;
 
     /**
      * Elective controller.
@@ -86,7 +88,9 @@ Twig template `elective/index.html.twig` loops through array `electives`, wrappi
 ```html
     {% for elective in electives %}
         <tr>
-            <td><a href="{{ path('elective_show', { 'id': elective.id }) }}">{{ elective.id }}</a></td>
+            <td><a href="{{ path('elective_show', { 'id': elective.id }) }}">
+                {{ elective.id }}</a>
+            </td>
             <td>{{ elective.moduleCode }}</td>
             <td>{{ elective.moduleTitle }}</td>
             <td>{{ elective.credits }}</td>

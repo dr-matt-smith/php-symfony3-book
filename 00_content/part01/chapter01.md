@@ -34,7 +34,11 @@ or
         $  composer create-project symfony/framework-standard-edition project01
 ```
 
-Learn about both these methods at the [Symfony download-installer page](http://symfony.com/download) and the [Symfony setup page](https://symfony.com/doc/current/setup.html)
+Learn about both these methods at:
+
+- [the Symfony download-installer page](http://symfony.com/download)
+
+- [the Symfony setup page](https://symfony.com/doc/current/setup.html)
 
 or
 
@@ -54,7 +58,7 @@ Download a project (e.g. `git clone URL`), then type `composer update` to downlo
 ### From the CLI
 If you're not using a database engine like MySQL, then you can use the Symfony console command to 'serve up' your Symfony project from the command line
 
-At the CLI (comamnd line terminal) ensure you are at the base level of your project (i.e. the same directory that has your `composer.json` file), and type the following:
+At the CLI (comamnd line terminal) ensure you are at the base level of your project (i.e. the same directory that has your `composer.json` file), and type the following^[Since you'll be typing this a lot when testing, you could add a `script` shortcut in your `composer.json` file. I have one named `run`, so I can run the webserve by typing `composer run` at the CLI. The JSON for this script is simple `"run":"php bin/console server:run:"`.]:
 
 ```bash
     $ php bin/console server:run
@@ -63,6 +67,7 @@ At the CLI (comamnd line terminal) ensure you are at the base level of your proj
 ### Webserver
 If you are running a webserver (or combined web and database server like XAMPP or Laragon), then point your web server root to the `/web` folder - this is where public files go in Symfony projects.
 
-### Problem Solving
+## It isn't working! (Problem Solving)
 
-If you have trouble with running Symfony, take a look at Appendix \cite{appendix_problem_solving}, which lists some common issues and how to solve them.
+If you have trouble with running Symfony, take a look at Appendix \ref{appendix_problem_solving}, which lists some common issues and how to solve them.
+

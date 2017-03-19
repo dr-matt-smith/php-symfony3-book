@@ -17,7 +17,7 @@ First, in `security.yml` we need to change the encoder from `plaintext` to BCryp
             cost: 12
 ```
 
-Now we need to replace the plaintext passwords for our 3 users (`user`, `admin` and `matt`) with their BCrypted passwords. We can do this by using the Symfony command line tool that will tell us the encoded string for a given password (using the encoder specified in `security.yml`). So we'll need to run this 3 times:
+Now we need to replace the plaintext passwords for our 3 users (`user`, `admin` and `matt`) with their BCrypted passwords. We can do this by using the Symfony command line tool that will tell us the encoded string for a given password (using the encoder specified in `security.yml`). So we'll need to run this 3 times (and copy-paste the encoded password into our `security.yml` YAML file each time:
 
 ```bash
     $ php bin/console security:encode-password
@@ -28,7 +28,7 @@ Figure \ref{encoding} shows the interactive password encoding session for passwo
 
 ![CLI password encoding (for password `user`). \label{encoding}](./03_figures/authentication/28_encoding_sm.png)
 
-So the full listing for our `security.yml` configuration, stating the encoder and the encryped passwords looks like this:
+So the full listing for our `security.yml` configuration, stating the encoder and the hashed passwords looks like this:
 
 ```yaml
     security:

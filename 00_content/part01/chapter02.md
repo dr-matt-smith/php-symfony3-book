@@ -1,14 +1,6 @@
 
 # First steps
 
-## It isn't working
-
-If you don't get the default Symfony home page, try this:
-
-- copy the contents of `/web/app_dev.php` into `/web/app.php`
-
-WARNING - this is just for now (we'll learn property Symfony configuration later). But this should get you going for now. You should NEVER do this for a project that might actually end up as a public production site!
-
 
 ## All I get is the symfony home page (`project01`)
 

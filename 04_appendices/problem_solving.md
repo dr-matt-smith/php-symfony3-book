@@ -1,6 +1,6 @@
 
 
-# Solving problems with Symfony
+# Solving problems with Symfony \label{appendix_problem_solving}
 
 
 ## No home page loading
@@ -21,7 +21,7 @@ If you have issues of Symfony not finding a new route you've added via a control
 
 Symfony caches (stores) routing data and also rendered pages from Twig, to speed up reponse time. But if you have changed controllers and routes, sometimes you have to manually delete the cache to ensure all new routes are checked against new requests.
 
-## Issues with timezone \label{appendix_problem_solving}
+## Issues with timezone
 
 Try adding the following construction to `/app/AppKernel.php` to solve timeszone problems:
 

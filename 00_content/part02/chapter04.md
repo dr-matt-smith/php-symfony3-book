@@ -25,7 +25,7 @@ You can read more about ORMs and Symfony at:
 - (Symfony's Doctrine help pages)[http://symfony.com/doc/current/doctrine.html]
 
 ## Quick start
-Once you've learnt how to work with Entity classes and Doctrine, these are the 3 commands you need to know:
+Once you've learnt how to work with Entity classes and Doctrine, these are the 3 commands you need to know (executed from the CLI console `php bin/console ...`):
 
 1. `doctrine:database:create`
 1. `doctrine:database:migrate` (or possibly `doctrine:schema:update --force`)
@@ -33,56 +33,20 @@ Once you've learnt how to work with Entity classes and Doctrine, these are the 3
 
 This should make sense by the time you've reached the end of this chapter.
 
+## Setting up your project to work with MySQL or SQLite
 
-## Setting up the database credentials
+You need to decide which database system you'll use for your project, and then configure the project with details of the database driver, host/path etc. See the following Appendices to learn about these issues, and to find specific instructions for both MySQL and SQLite (both are very easy to setup for Symfony):
 
-The simplest way to connect your Symfony application to a MySQL database is by creating/editing the `parameters.yml`
+- Appendix \ref{appendix_parameters} describing the parameter and config files in `/app/config`
 
-```
-    # This file is auto-generated during the composer install
-    parameters:
-        database_host: 127.0.0.1
-        database_port: null
-        database_name: symfony_book
-        database_user: root
-        database_password: null
-```
+- Appdenix \ref{appendix_db_mysql} describing how to set up a project for MySQL
 
-This file is located in:
+- Appdendix \ref{appendix_db_sqlite} describing how to set up a project for SQLite
 
-```
-    /app/config/parameters.yml
-```
-
-Note that this file is include in the `.gitignore`, so it is **not** archived in your Git folder. Usually we need different parameter settings for different deployments, so while on your local, development machine you'll have certain settings, you'll need different settings for your public production 'live' website. Plus you don't want to accidently publically expose your database credentials on a open source Github page :-)
-
-If there isn't already a `parameters.yml` file, then you can copy the `parameters.yml.dist` file end edit it as appropriate. You can replace `127.0.0.1` with `localhost` if you wish. If your code cannot connect to the database check the 'port' that your MySQL server is running at (usualy 3306 but may be different, for example my Mac MAMP server uses 8889 for MySQL for some reason). So my parameters look like this:
+    NOTE this appendix also includes a link to the SQLite website page helping you decide whether SQLite is suitable
 
 
-```
-    parameters:
-        database_host:     127.0.0.1
-        database_port:     8889
-        database_name:     symfony_book
-        database_user:     symfony
-        database_password: pass
+If you aer working on a small project / small website, often you'll find SQLite easier to setup and faster to work with (since you don' need to run any database server etc.). So it's worth a few minutes thinking before choosing which database system to work with before you go ahead and configure your project.
 
-```
 
-We can now use the Symfony CLI to **generate** the new database for us. You've guessed it, we type:
 
-```bash
-    $ php bin/console doctrine:database:create
-```
-
-You should now see a new database in your DB manager. Figure \ref{new_db} shows our new `symfony_book` database created for us.
-
-![CLI created database in PHPMyAdmin. \label{new_db}](./03_figures/database/1_new_db.png)
-
-**NOTE** Ensure your database server is running before trying the above, or you'll get an error like this:
-
-```
-    [PDOException] SQLSTATE[HY000] [2002] Connection refused
-```
-
-now we have a database it's time to start creating tables and populating it with records ...
