@@ -98,7 +98,8 @@ Figure \ref{student_list2} shows how a new record `freddy` is added to the datab
 ## Deleting by id
 
 Let's define a delete route `/students/delete/{id}` and a `deleteAction()` controller method. This method needs to first retreive the object (from the database) with the given ID, then ask to remove it, then flush the changes to the database (i.e. actually remove the record from the database). Note in this method we need both a reference to the entity manager `$em` and also to the student repository object `$studentRepository`:
-```
+
+```php
     /**
      * @Route("/students/delete/{id}")
      */
@@ -114,7 +115,7 @@ Let's define a delete route `/students/delete/{id}` and a `deleteAction()` contr
         // tells Doctrine you want to (eventually) delete the Student (no queries yet)
         $em->remove($student);
 
-        // actually executes the queries (i.e. the INSERT query)
+        // actually executes the queries (i.e. the DELETE query)
         $em->flush();
 
         return new Response('Deleted student with id '.$id);
@@ -154,7 +155,7 @@ Until we write an error handler we'll get Symfony style exception pages, such as
 Note, to illustrate a few more aspects of Symfony some of the coding in `updateAction()` has been written a little differently:
 
 - we are getting the reference to the repository via the entity manager `$em->getRepository('AppBundle:Student')`
-- we are 'chaining' the `find($id)` method call onto the end of the code to get a reference to the repository (rather than storing the repostory object reference and then invoking  `find($id)`). This is an exmaple of using the 'fluent' interface^[read about it at [Wikipedia](https://en.wikipedia.org/wiki/Fluent_interface)] offerede by Doctrine (where methods finish by returning an reference to their object, so that a sequence of method calls can be written in a single statement.
+- we are 'chaining' the `find($id)` method call onto the end of the code to get a reference to the repository (rather than storing the repostory object reference and then invoking  `find($id)`). This is an example of using the 'fluent' interface^[read about it at [Wikipedia](https://en.wikipedia.org/wiki/Fluent_interface)] offered by Doctrine (where methods finish by returning an reference to their object, so that a sequence of method calls can be written in a single statement.
 - rather than returning a `Response` containing a message, this controller method redirect the webapp to the route named `homepage`
 
 We should also add the 'no student for id' test in our `deleteAction()` method ...

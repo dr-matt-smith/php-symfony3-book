@@ -96,7 +96,8 @@ A first attempt could be like this:
 But we get a Symfony error when we attempt to display this list page, complaining:
 
 ```
-    An exception has been thrown during the rendering of a template ("Some mandatory parameters are missing ("id") to generate a URL for route "students_show".").
+    An exception has been thrown during the rendering of a template
+    ("Some mandatory parameters are missing ("id") to generate a URL for route "students_show".").
 ```
 
 Symfony can't see that we're trying to add on the id after the show route. So we need to pass the id parameter inside the Twig `path()` function as follows:

@@ -271,4 +271,5 @@ And our refactored method `newFormAction()` is:
 
 Here are some video resources on this topic:
 
-- (Code Review form validation with `@Assert`)[https://codereviewvideos.com/course/beginner-s-guide-to-symfony-3-forms/video/validating-form-data-with-symfony-3]
+- [Code Review form validation with `@Assert`](https://codereviewvideos.com/course/beginner-s-guide-to-symfony-3-forms/video/validating-form-data-with-symfony-3)
+

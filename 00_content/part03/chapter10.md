@@ -45,6 +45,20 @@ These include:
 - Boostrap CSS framework div's and CSS classes
     - bootstrap_3_layout.html.twig
 
+
+
+For example, to use the `div` layout we can declare this template be used for all forms in the `/app/config/config.yml` file as follows:
+
+```yaml
+    twig:
+        debug:            "%kernel.debug%"
+        strict_variables: "%kernel.debug%"
+        form_themes:
+          - 'form_div_layout.html.twig'
+```
+
+
+
 ## DIY (Do-It-Yourself) form display customisations
 
 Each form field can be rendered all in one go in the following way:
