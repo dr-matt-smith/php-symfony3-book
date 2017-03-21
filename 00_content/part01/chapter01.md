@@ -71,3 +71,11 @@ If you are running a webserver (or combined web and database server like XAMPP o
 
 If you have trouble with running Symfony, take a look at Appendix \ref{appendix_problem_solving}, which lists some common issues and how to solve them.
 
+### Opaque 500 Server error message
+
+If Symfony thinks you are in **production** (live public website) then when an error occurs it will through a 500 server error (which a real production site would catch and display nicer looking message for website visitors).
+
+Since we are in production we want to see the **details** of any errors. So after a 500 Server error,  refresh the browser page, but prepend `/app_dev.php/` to your URL - you'll then get a much more detailed description of the error (including the class / line / template causing the problem etc.).
+
+Also, if you know where your error logs are stored, you can see the errors written to the log file...
+
