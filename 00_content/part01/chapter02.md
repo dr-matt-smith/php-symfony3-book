@@ -75,7 +75,7 @@ Let's clear out the content of the controller, so there is no code in the body o
 
 NOTES:
 - leave all the 'uses' statements and the namespace, since they mean any classes we refer to, or annotations we use, all work correctly
-- leave teh `Route` annotation comment there, since what we are about to write will be what we want to happend for a request for the website home page (i.e. the web root URL of `/` for our webapp)
+- leave the `Route` annotation comment there, since what we are about to write will be what we want to happend for a request for the website home page (i.e. the web root URL of `/` for our webapp)
 - alse leave the `name="homepage"` part of the annotation route comment, since naming routes is very handy since it makes getting Twig to create links very easy
 
 We want to use the template `index.html.twig`, since they all end in `.html.twig` let's concatenate that on later

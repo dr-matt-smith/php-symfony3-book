@@ -90,6 +90,12 @@ Since we now have created our namespaced classes we can use them in a controller
 Here is the listing for `StudentController.php` (note we need to add a `use` statement so that we can refer to class `StudentRepository`):
 
 ```php
+    namespace AppBundle\Controller;
+
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Request;
+
     use AppBundle\StudentRepository;
 
     class StudentController extends Controller
@@ -114,11 +120,11 @@ Here is the listing for `StudentController.php` (note we need to add a `use` sta
 
 We can see from the above that we have declared a controller method `listAction` in our `StudentController`. We can also see that this controller action will be invoked when the webapp receives a HTTP request with the route pattern `/students/list`.
 
-The logic exectuted by the method is to get the array of `Student` records from an instance of `StudentRepository`, and then to pass this array to be rendered by the Twig template `students/list.html.twig`.
+The logic executed by the method is to get the array of `Student` records from an instance of `StudentRepository`, and then to pass this array to be rendered by the Twig template `students/list.html.twig`.
 
 ## Creating the Twig template to loop to display all students
 
-We will now create the Twig template `list.html.twig', in locaton `/app/Resources/views/students`.
+We will now create the Twig template `list.html.twig', in location `/app/Resources/views/students`.
 
 
 Figure \ref{students_dir} shows the 2 templates we are about to create in this location.

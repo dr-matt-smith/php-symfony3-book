@@ -46,7 +46,7 @@ You need to decide which database system you'll use for your project, and then c
     NOTE this appendix also includes a link to the SQLite website page helping you decide whether SQLite is suitable
 
 
-If you aer working on a small project / small website, often you'll find SQLite easier to setup and faster to work with (since you don' need to run any database server etc.). So it's worth a few minutes thinking before choosing which database system to work with before you go ahead and configure your project.
+If you are working on a small project / small website, often you'll find SQLite easier to setup and faster to work with (since you don' need to run any database server etc.). So it's worth a few minutes thinking before choosing which database system to work with before you go ahead and configure your project.
 
 
 

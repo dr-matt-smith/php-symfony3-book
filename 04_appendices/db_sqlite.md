@@ -2,6 +2,12 @@
 
 # Setting up for SQLIte Database \label{appendix_db_sqlite}
 
+## NOTE regarding FIXTURES
+
+If you are using the Doctrine Fixtures Bundle, install that first **before** changing paramaters and config for SQLite. The fixtures bundle assumes MySQL, and will overwrite some of the parameters during installation.
+
+If that does happen, you'll just have to repeat the steps in this Appdendix to set things back to SQLite after fixtures installation.
+
 ## SQLite suitable for most small-medium websites
 
 For small/medium projects, and learning frameworks like Symfony, it's often simplest to just use a file-based SQLite database.
@@ -18,7 +24,7 @@ Setting one up with Symfony is **very** easy. These steps assume you are gong to
 
 Our first step to configuring a Symfony project to work with SQLite is to ensure the directory exists where the SQLIte file is to be created. The usual location for Symfony projects is `/var/data`. So create directory `data` in `/var` if it doesn't already exist in your project.
 
-## Declaring the parameters for the database (`/app/config/parameters.yml`)
+## Declaring the parameters for the database (`parameters.yml`)
 
 In `/app/parameters.yml` replace the default `database_host/name/user/password` parameters with a single parameter `database_path` as follows:
 

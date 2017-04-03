@@ -2,7 +2,7 @@
 
 # Setting up for MySQL Database \label{appendix_db_mysql}
 
-## Declaring the parameters for the database (`/app/config/parameters.yml`)
+## Declaring the parameters for the database (`parameters.yml`)
 
 Usually the project-specific settings are declared in this file:
 
