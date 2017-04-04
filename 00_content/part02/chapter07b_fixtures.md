@@ -1,6 +1,6 @@
 
 
-# Fixtures - setting up a database state
+# Fixtures - setting up a database state \label{chapter_fixtures}
 
 ## Initial values for your project database
 
