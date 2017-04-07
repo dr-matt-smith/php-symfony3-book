@@ -432,4 +432,14 @@ We need to update `/app/config/security.yml` to specify that we'll use a form fo
                     target: /
 ```
 
+We also need to declare that there is a `/logout` route (but we don't need to implmenet a controller action for this route. So we add the route in `/app/config/routing.yml`:
+
+```yaml
+    app:
+        resource: "@AppBundle/Controller/"
+        type:     annotation
+
+    logout:
+        path: /logout
+```
 
