@@ -20,7 +20,7 @@ or ... you could use something like [Cloud9](https://c9.io/dr_matt_smith), web-b
 
 Either:
 
-- install the Symfony command line installed, then create a project like this (to create a new project in a directory named `project01`):
+- install the Symfony command line, then create a project like this (to create a new project in a directory named `project01`):
 
 ```bash
         $ symfony new project01
@@ -58,7 +58,7 @@ Download a project (e.g. `git clone URL`), then type `composer update` to downlo
 ### From the CLI
 If you're not using a database engine like MySQL, then you can use the Symfony console command to 'serve up' your Symfony project from the command line
 
-At the CLI (comamnd line terminal) ensure you are at the base level of your project (i.e. the same directory that has your `composer.json` file), and type the following^[Since you'll be typing this a lot when testing, you could add a `script` shortcut in your `composer.json` file. I have one named `run`, so I can run the webserve by typing `composer run` at the CLI. The JSON for this script is simple `"run":"php bin/console server:run:"`.]:
+At the CLI (command line terminal) ensure you are at the base level of your project (i.e. the same directory that has your `composer.json` file), and type the following^[Since you'll be typing this a lot when testing, you could add a `script` shortcut in your `composer.json` file. I have one named `run`, so I can run the webserver by typing `composer run` at the CLI. The JSON for this script is simple `"run":"php bin/console server:run:"`.]:
 
 ```bash
     $ php bin/console server:run
@@ -73,9 +73,9 @@ If you have trouble with running Symfony, take a look at Appendix \ref{appendix_
 
 ### Opaque 500 Server error message
 
-If Symfony thinks you are in **production** (live public website) then when an error occurs it will through a 500 server error (which a real production site would catch and display nicer looking message for website visitors).
+If Symfony thinks you are in **production** (live public website) then when an error occurs it will throw a 500 server error (which a real production site would catch and display some nicely sanitised message for website visitors).
 
-Since we are in production we want to see the **details** of any errors. So after a 500 Server error,  refresh the browser page, but prepend `/app_dev.php/` to your URL - you'll then get a much more detailed description of the error (including the class / line / template causing the problem etc.).
+Since we are in **development** we want to see the **details** of any errors. So after a 500 Server error,  refresh the browser page, but prepend `/app_dev.php/` to your URL - you'll then get a much more detailed description of the error (including the class / line / template causing the problem etc.).
 
 Also, if you know where your error logs are stored, you can see the errors written to the log file...
 
