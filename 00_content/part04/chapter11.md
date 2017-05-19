@@ -41,7 +41,9 @@ Next Doctrine asks us how we will declare the mapping information between this e
     Configuration format (yml, xml, php, or annotation) [annotation]:
 ```
 
-Finally Doctrine asks us to start describing each field we want.
+Finally Doctrine asks us to start describing each field we want^[Learn more about Doctrine field types at: [Doctrine documentation 'Types' chapter](http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html)].
+
+Becase there is no `action` attribute in the `<form>` tag, then browsers automatically submit back to the same URL. This is known in web development as a **postback** and is very common^[read more at the [Wikipedia postback page](https://en.wikipedia.org/wiki/Postback)].
 
 ```bash
     Instead of starting with a blank entity, you can add some fields now.

@@ -92,6 +92,8 @@ We can see **why** the form submits to the same request URL as was used to displ
 
 Becase there is no `action` attribute in the `<form>` tag, then browsers automatically submit back to the same URL. This is known in web development as a **postback** and is very common^[read more at the [Wikipedia postback page](https://en.wikipedia.org/wiki/Postback)].
 
+
+
 If we use the Chrome developer tools again, after submitting name `joe-smith` we can see that the name has been sent in the body of the `POST` request to our webapp, as `form[name]`. We can see these details in Figure \ref{form_builder_post_chrome}.
 
 ![Chrome developer tools showing `POST` submitted variable `joe-smith`. \label{form_builder_post_chrome}](./03_figures/forms/5_post_method_chome_sm.png)

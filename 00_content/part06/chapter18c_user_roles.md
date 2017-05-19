@@ -21,7 +21,7 @@ You may have noticed that no roles were stored as part of our previous `User` en
 
 Let's update our Entity code to allow different roles to be defined and stored/retrieved.
 
-1. First let's change the private property (allowing Doctrine to save an array into a database text field - so a single user record can store multple roles):
+1. First let's change the private property (allowing Doctrine to save an array into a database text field - so a single user record can store multiple roles):
 
     ```php
         /**
@@ -70,7 +70,9 @@ If using fixtures to insert some user records into our database, we need to upda
         public function load(ObjectManager $manager)
         {
             // create objects
-            $userSuperAdmin = $this->createActiveUser('super', 'super@admin.com', 'super', ['ROLE_SUPER_ADMIN']);
+            $userSuperAdmin = $this->createActiveUser('super', 'super@admin.com', 'super',
+            ['ROLE_SUPER_ADMIN']);
+
             $userAdmin = $this->createActiveUser('admin', 'admin@admin.com', 'admin', ['ROLE_ADMIN']);
             $userMatt = $this->createActiveUser('matt', 'matt@matt.com', 'smith');
             // store to DB
