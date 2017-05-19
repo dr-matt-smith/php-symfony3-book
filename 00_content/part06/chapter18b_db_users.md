@@ -1,7 +1,7 @@
 
 # Database-provided security users
 
-## Encoding the user passwords (`recipe01`)
+## Overview of DB provided users (`recipe01`)
 
 Having learnt about sessions and security piecemeal, let's now do things the normal way, with users provided to the authentication system from a database. In this chapter we'll start a new project from scratch, and implement the following:
 

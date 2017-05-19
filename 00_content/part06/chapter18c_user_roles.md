@@ -95,6 +95,14 @@ If using fixtures to insert some user records into our database, we need to upda
             $user->setPassword($encodedPassword);
             return $user;
         }
+
+
+        private function encodePassword($user, $plainPassword):string
+        {
+            $encoder = $this->container->get('security.password_encoder');
+            $encodedPassword = $encoder->encodePassword($user, $plainPassword);
+            return $encodedPassword;
+        }
     ```
 
 Don't forget to update your database schema and reload your fixtures...

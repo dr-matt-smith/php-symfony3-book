@@ -1,5 +1,5 @@
 
-# Logged-in user as author
+# Customising view based on logged-in user
 
 ## Twig nav links when logged in (`recipe03`)
 
