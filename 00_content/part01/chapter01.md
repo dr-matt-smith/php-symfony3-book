@@ -5,7 +5,7 @@
 
 It's a PHP 'framework' that does loads for you, if you're writing a secure, database-drive web application.
 
-## How to I need on my computer to get started?
+## What to I need on my computer to get started?
 
 I recommend you install the following:
 
