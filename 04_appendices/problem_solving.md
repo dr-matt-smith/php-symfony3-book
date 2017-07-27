@@ -32,3 +32,51 @@ Try adding the following construction to `/app/AppKernel.php` to solve timeszone
         parent::__construct($environment, $debug);
     }
 ```
+
+## Issues with Symfony 3 and PHPUnit.phar
+
+Symfon 3.2 has issues with PHPUnit (it's PHPUnit's fault!). You can solve the problem with the Symphony PHPUnit `bridge` - which you install via Composer:
+
+```bash
+    composer require --dev symfony/phpunit-bridge
+```
+
+You then execute your PHPUnit test with the `simple-phpunit` command in `/vendor/bin` as follows:
+
+```bash
+    ./vendor/bin/simple-phpunit
+```
+
+Source:
+
+- [Symfony Blog December 2016](http://symfony.com/blog/how-to-solve-phpunit-issues-in-symfony-3-2-applications)
+
+## PHPUnit installed via Composer
+
+To install PHPUnit with Composer run the following Composer update CLI command:
+
+```bash
+    composer require --dev phpunit/phpunit ^6.1
+```
+
+To run tests in directory `/tests` exectute the following CLI command:
+
+```bash
+    ./vendor/bin/phpunit tests
+```
+
+Source:
+
+- [Stack overflow](https://stackoverflow.com/questions/13764309/how-to-use-phpunit-installed-from-composer)
+
+As always you can add a shortcut script to your `composer.json` file to save typing, e.g.:
+
+```json
+    "scripts": {
+        "run":"php bin/console server:run",
+        "test":"./vendor/bin/phpunit tests",
+
+        ...
+    }
+```
+
