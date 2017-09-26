@@ -214,3 +214,10 @@ Finally, we need to add code in our new student form Twig template to display an
 
         (... show HTML form as before ...)
 ```
+
+
+## Extra notes
+
+Here is how to work with Enum style drop-down combo-boxes:
+
+- [Articled on Symfony Enums in forms frmo Maxence POUTORD](http://www.maxpou.fr/dealing-with-enum-symfony-doctrine/)

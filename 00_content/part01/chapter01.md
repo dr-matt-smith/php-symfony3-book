@@ -25,7 +25,6 @@ Either:
 ```bash
         $ symfony new project01
 ```
-
 or
 
 - use Composer to create a new blank project for you, like this (to create a new project in a directory named `project01`):
